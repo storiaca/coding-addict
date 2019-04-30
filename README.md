@@ -1,2 +1,1 @@
-# codding-addict
 # coding-addict
