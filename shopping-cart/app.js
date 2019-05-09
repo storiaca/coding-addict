@@ -48,7 +48,7 @@ class UI {
           />
           <button class="bag-btn" data-id=${product.id}>
             <i class="fas fa-shopping-cart"></i>
-            Add to bag
+            Add to cart
           </button>
         </div>
         <h3>${product.title}</h3>
@@ -134,6 +134,35 @@ class UI {
   populateCart(cart){
     cart.forEach(item => this.addCartItem(item))
   }
+
+  cartLogic(){
+    // clear cart button
+    clearCartBtn.addEventListener("click", () => {
+      this.clearCart();
+    });
+    // cart functionality
+  }
+
+  clearCart() {
+    // get ids of items that are in the cart
+    let cartItems = cart.map(item => item.id);
+    cartItems.forEach(id => this.removeItem(id));
+    while(cartContent.children.length > 0) {
+      cartContent.removeChild(cartContent.children[0]);
+    }
+    this.hideCart();
+  }
+  removeItem(id) {
+    cart = cart.filter(item => item.id !== id);
+    this.setCartValues(cart);
+    Storage.saveCart(cart);
+    let button = this.getSingleButton(id);
+    button.disabled = false;
+    button.innerHTML = `<i class="fas fa-shopping-cart"></i> Add to cart`;
+  }
+  getSingleButton(id) {
+    return buttonsDOM.find(button => button.dataset.id === id);
+  }
 }
 
 // Local storage
@@ -164,11 +193,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Get all products
   products.getProducts()
     .then(products => {
-      ui.displayProducts(products)
+      ui.displayProducts(products);
       Storage.saveProducts(products);
     })
     .then(() => {
-      ui.getBagButtons()
+      ui.getBagButtons();
+      ui.cartLogic();
     })
     .catch(err => console.log(err));  
 });
