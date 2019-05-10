@@ -1,17 +1,27 @@
 /**
- * Return only if all values are unique, otherwise false
+ * Return true only if all values are unique, otherwise false
  * Using Array, Object, string method lastIndexOf()
  * no Set Data Structure
  */
 function unique(str) {
-  let values = [];
+  let values = {};
   for(let letter of str) {
-    if(values.indexOf(letter) !== -1) {
+    if(values[letter]) {
       return false;
     } 
-    values.push(letter);
+    values[letter] = "exists";
   }
   return true;
+
+  // Array type
+  // let values = [];
+  // for(let letter of str) {
+  //   if(values.indexOf(letter) !== -1) {
+  //     return false;
+  //   } 
+  //   values.push(letter);
+  // }
+  // return true;
 }
 
 console.log(unique("abcde"));
