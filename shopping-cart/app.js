@@ -154,10 +154,20 @@ class UI {
         Storage.saveCart(cart);
         this.setCartValues(cart);
         addAmount.nextElementSibling.innerText = tempItem.amount;
+      } else if (event.target.classList.contains("fa-chevron-down")) {
+        let lowerAmount = event.target;
+        let id = lowerAmount.dataset.id;
+        let tempLower = cart.find(item => item.id === id);
+        tempLower.amount--;
+        if (tempLower.amount > 0) {
+          Storage.saveCart(cart);
+          this.setCartValues(cart);
+          lowerAmount.previousElementSibling.innerText = tempLower.amount;
+        } else {
+          cartContent.removeChild(lowerAmount.parentElement.parentElement);
+          this.removeItem(id);
+        }
       }
-      //console.log(removeItem);
-
-      //fa-chevron-down
     });
   }
 
