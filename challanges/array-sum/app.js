@@ -13,6 +13,6 @@ function ArraySum(arr) {
 }
 
 console.log(ArraySum([1,6,4,2,13]));
-// returns true 1+2+4+6=14
+// returns true 1+2+4+6=13
 console.log(ArraySum([1,2,4,34,22]));
 // returns false 1+2+4+22=29 29!=34
