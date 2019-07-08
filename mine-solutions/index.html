@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hide spans</title>
-</head>
-<body>
-  <div class="widget-contact-info-contact">
-    <p>Adress</p>
-    <p>Belgrade</p>
-    <p>
-      <span>Phone:</span>
-      <span>HR & General inquiries: +381 11 4022 463</span>
-    </p>
-    <p>
-      <span>Phone:</span>
-      <span>Sales and general: +381 11 4022 464</span>
-    </p>
-  </div>
-  <script>
-    const allSpan = document.querySelectorAll(
-      ".widget-contact-info-contact p span"
-    );
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hide spans</title>
+  </head>
+  <body>
+    <div class="widget-contact-info-contact">
+      <p>Adress</p>
+      <p>Belgrade</p>
+      <p>
+        <span>Phone:</span>
+        <span>HR & General inquiries: +381 11 4022 463</span>
+      </p>
+      <p>
+        <span>Phone:</span>
+        <span>Sales and general: +381 11 4022 464</span>
+      </p>
+    </div>
+    <script type="text/javascript">
+      window.onload = function() {
+        const allSpan = document.querySelectorAll(
+          ".widget-contact-info-contact p span"
+        );
 
-    let arrSpan = [...allSpan];
-    for (let index = 0; index < arrSpan.length; index++) {
-      if (arrSpan[index].innerHTML == "Phone:") {
-        arrSpan[index].style.display = "none";
-      }
-    }
+        let arrSpan = [...allSpan];
+        for (let index = 0; index < arrSpan.length; index++) {
+          if (arrSpan[index].innerHTML == "Phone:") {
+            arrSpan[index].style.display = "none";
+          }
+        }
 
-    console.log(allSpan);
-</body>
+        console.log(allSpan);
+      };
+    </script>
+  </body>
 </html>
