@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Remove class</title>
+</head>
+<body>
+  <div class="vc_row wpb_row vc_row-fluid contact-section-2 vc_custom_1564559454588">
+    <div class="wpb_column vc_column_container vc_col-sm-1/5 vc_col-lg-1/5 vc_col-md-12">
+      <div class="vc_column-inner vc_custom_1564558960992">
+        <div class="wpb_wrapper">
+          <div class="wpb_text_column wpb_content_element  vc_custom_1564137454091">
+            <div class="wpb_wrapper">
+              <div class="page" title="Page 1">
+                <div class="layoutArea">
+                  <div class="column" style="line-height: 17px;">
+                    <p><span>Lorem ipsum dot</span><br />
+                      <span>Lorem ipsum dot
+                      </span><br />
+                      <span>Lorem ipsum dot </span><br />
+                      <span>Lorem ipsum dot</span></p>
+                    <p>Lorem ipsum dot</span><br />
+                      <span>Lorem ipsum dot</span><br />
+                      <span>Lorem ipsum dot</span></p>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wpb_column vc_column_container vc_col-sm-1/5 vc_col-lg-1/5 vc_col-md-3">
+      <div class="vc_column-inner vc_custom_1564559320552">
+        <div class="wpb_wrapper">
+          <div class="wpb_raw_code wpb_content_element wpb_raw_html">
+            <div class="wpb_wrapper">
+              <p>Lorem ipsum dot</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wpb_column vc_column_container vc_col-sm-1/5 vc_col-lg-1/5 vc_col-md-3">
+      <div class="vc_column-inner vc_custom_1564559326687">
+        <div class="wpb_wrapper">
+          <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1564557488673">
+            <div class="wpb_wrapper">
+              <p>Lorem ipsum dot</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wpb_column vc_column_container vc_col-sm-1/5 vc_col-lg-1/5 vc_col-md-3">
+      <div class="vc_column-inner vc_custom_1564559334931">
+        <div class="wpb_wrapper">
+          <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1564557515649">
+            <div class="wpb_wrapper">
+              <p>Lorem ipsum dot</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wpb_column vc_column_container vc_col-sm-1/5 vc_col-lg-1/5 vc_col-md-3">
+      <div class="vc_column-inner vc_custom_1564559341159">
+        <div class="wpb_wrapper">
+          <div class="wpb_raw_code wpb_content_element wpb_raw_html vc_custom_1564557527184">
+            <div class="wpb_wrapper">
+              <p>Lorem ipsum dot</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+          window.onload = function () {
+              const smColumn = document.querySelectorAll(
+                ".contact-section-2 div.wpb_column"
+              );
+              let arrColumn = [...smColumn];
+              for (let i = 0; i< arrColumn.length; i++) {
+                arrColumn[i].classList.remove("vc_col-sm-1/5")
+              }
+
+
+              console.log(smColumn);
+
+              var sPath = window.location.pathname;
+            if (sPath === "/contact/") {
+              document.querySelector("#content > article > div > div:nth-child(9) > div > div > div > div > div > div > div > div.lvca-heading.lvca-style1.lvca-aligncenter > h3").onclick = function () {
+                var x = document.querySelector("#custom-vizit");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              };
+              document.querySelector("#content > article > div > div:nth-child(6) > div > div > div > div.vc_row.wpb_row.vc_inner.vc_row-fluid.vc_custom_1564036058216.vc_row-has-fill > div > div > div > div.lvca-heading.lvca-style1.lvca-aligncenter > h3").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(6) > div > div > div > div:nth-child(2)");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              };
+            }
+            if (sPath === "/services/") {
+              document.querySelector("#content > article > div > div:nth-child(5) > div > div > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-8 > div > div > div.vc_wp_text.wpb_content_element > div > div > p:nth-child(2) > span").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(5) > div > div > div > div:nth-child(2) > div.wpb_column.vc_column_container.vc_col-sm-8");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              };
+              document.querySelector("#content > article > div > div:nth-child(6) > div > div > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-8 > div > div > div.vc_wp_text.wpb_content_element > div > div > p:nth-child(2) > span").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(6) > div > div > div > div:nth-child(2) > div.wpb_column.vc_column_container.vc_col-sm-8");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              }
+              document.querySelector("#content > article > div > div:nth-child(7) > div > div > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-8 > div > div > div.vc_wp_text.wpb_content_element > div > div > p:nth-child(2) > span").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(7) > div > div > div > div:nth-child(2) > div.wpb_column.vc_column_container.vc_col-sm-8");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              }
+              document.querySelector("#content > article > div > div:nth-child(8) > div > div > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-8 > div > div > div.vc_wp_text.wpb_content_element > div > div > p:nth-child(2) > span").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(8) > div > div > div > div:nth-child(2) > div.wpb_column.vc_column_container.vc_col-sm-8");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              }
+            }
+            if (sPath === "/sl/contact/") {
+              document.querySelector("#content > article > div > div:nth-child(6) > div > div > div > div.vc_row.wpb_row.vc_inner.vc_row-fluid.vc_custom_1564036058216.vc_row-has-fill > div > div > div > div.lvca-heading.lvca-style1.lvca-aligncenter > h3").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(6) > div > div > div > div:nth-child(2)");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              };
+              document.querySelector("#content > article > div > div:nth-child(9) > div > div > div > div > div > div > div > div.lvca-heading.lvca-style1.lvca-aligncenter > h3").onclick = function () {
+                var x = document.querySelector("#custom-vizit");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              };
+            }
+            if (sPath === "/sl/services/") {
+              document.querySelector("#content > article > div > div:nth-child(5) > div > div > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-8 > div > div > div.vc_wp_text.wpb_content_element > div > div > p:nth-child(2) > span").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(5) > div > div > div > div:nth-child(2) > div.wpb_column.vc_column_container.vc_col-sm-8");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              };
+              document.querySelector("#content > article > div > div:nth-child(6) > div > div > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-8 > div > div > div.vc_wp_text.wpb_content_element > div > div > p:nth-child(2) > span").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(6) > div > div > div > div:nth-child(2) > div.wpb_column.vc_column_container.vc_col-sm-8");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              }
+              document.querySelector("#content > article > div > div:nth-child(7) > div > div > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-8 > div > div > div.vc_wp_text.wpb_content_element > div > div > p:nth-child(2) > span").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(7) > div > div > div > div:nth-child(2) > div.wpb_column.vc_column_container.vc_col-sm-8");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              }
+              document.querySelector("#content > article > div > div:nth-child(8) > div > div > div > div:nth-child(1) > div.wpb_column.vc_column_container.vc_col-sm-8 > div > div > div.vc_wp_text.wpb_content_element > div > div > p:nth-child(2) > span").onclick = function () {
+                var x = document.querySelector("#content > article > div > div:nth-child(8) > div > div > div > div:nth-child(2) > div.wpb_column.vc_column_container.vc_col-sm-8");
+                if (x.style.display === "" || x.style.display === "none") {
+                  x.style.display = "block";
+                }
+                else {
+                  x.style.display = "none";
+                }
+              }
+            }
+              
+            };
+  </script>
+</body>
+</html>
